@@ -87,5 +87,15 @@ Screenshots are real browser captures of synthetic data. Some text softness come
 from the in-app browser capture; no generated UI artwork or artificial data overlays
 were used.
 
-GitHub Actions is configured but **has not run remotely**: publication was explicitly
-deferred. No GitHub repository or remote has been created for DataTriage.
+At the initial validation checkpoint, publication was explicitly deferred and no
+hosted CI run had occurred. Consult the repository Actions page for subsequent
+publication checks and per-commit results.
+
+## Final publication audit
+
+The complete 89-test suite passed again with warnings treated as errors. All 38
+tracked files were reviewed; screenshots decode, demo workbook XML contains no
+credential/local-path pattern matches, and all six declared dependencies are used.
+Ignore rules exclude the environment, caches, uploads, downloads and temporary files.
+The launcher uses project-relative paths. The README opening was shortened and its
+clone URL updated for the verified account. Application functionality was unchanged.

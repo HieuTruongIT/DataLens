@@ -13,17 +13,11 @@ cleaning plan, and compares the result with an untouched source before export.
 
 ## Features
 
-- CSV (UTF-8; comma, semicolon, tab or pipe) and XLSX with sheet selection.
-- Overview, column statistics, issue filters, affected rows and numeric distributions.
-- Missing/empty/constant columns, duplicate rows and headers, equal-value columns,
-  whitespace, mixed types, category variants, date-shaped text, IQR outliers and infinity.
-- Explicit rules for date format, numeric type, identifier uniqueness and numeric range.
-- Four transparent score components, with overlapping findings counted once per cell.
-- Ordered cleaning plans: trim, normalize case, blank-to-null, remove duplicates or empty
-  rows/columns, drop a chosen column, fill missing values, convert types, remove selected-column outlier rows.
-- Before/after statistics, per-action risks, newly missing cells, acknowledgement and apply.
-- Cleaned CSV/XLSX and a structured JSON quality report.
-- Synthetic demos, tested business logic and GitHub Actions workflow.
+- Profile CSV or an Excel sheet; inspect missing values, duplicates, types and outliers.
+- Add explicit date, numeric, identifier and range rules; inspect affected rows.
+- Understand four transparent quality-score components and issue severity.
+- Preview an ordered cleaning plan, acknowledge it, then apply it to a separate copy.
+- Export cleaned CSV/XLSX and a JSON report with before/after statistics and action history.
 
 ## Screenshots
 
@@ -86,10 +80,10 @@ format/category variants; INFO for outliers, constants and structural hints.
 Requires Python 3.11 or newer within the supported dependency ranges.
 Python 3.12 is the locally validated runtime; CI is configured for 3.11 and 3.13.
 
-Clone after publication, or open the downloaded project folder:
+Clone the repository, or open the downloaded project folder:
 
 ```powershell
-git clone https://github.com/YOUR_USERNAME/DataTriage.git
+git clone https://github.com/arysbey/DataTriage.git
 cd DataTriage
 python -m venv .venv
 .\.venv\Scripts\python.exe -m pip install -r requirements.txt
@@ -164,8 +158,8 @@ See [validation record](docs/validation.md) for actual results, browser scenario
 and measured limits. The workflow runs pytest on push and pull request with
 [checkout](https://github.com/actions/checkout) and
 [setup-python](https://github.com/actions/setup-python).
-A workflow file is not a claim that hosted CI has run: this project is prepared
-locally and has not yet been published.
+See the [Actions page](https://github.com/arysbey/DataTriage/actions) for verified
+workflow results for each commit.
 
 ## Privacy
 
